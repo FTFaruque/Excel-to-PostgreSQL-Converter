@@ -1,0 +1,53 @@
+{
+    "$schema" : "https://json-schema.org/draft/2020-12/schema",
+    "title" : "Config schema",
+    "type" : "object",
+    "properties" : {
+        "Excel":{
+            "type" : "object",
+            "properties":{
+                "source":{
+                    "type" : "string"
+                },
+                "sheet_names":{
+                    "type" : "array",
+                    "items":{
+                        "type" : "string"
+                    },
+                    "minItems" : 1
+                }
+            },
+            "required" : ["source", "sheet_names"]
+        },
+        "Postgres-DB":{
+            "type": "object",
+            "properties":{
+                "username":{
+                    "type" : "string"
+                },
+                "password": {
+                    "type" : "string"
+                },
+                "db_name": {
+                    "type" : "string"
+                },
+                "server":{
+                    "type" : "string"
+                },
+                "table_name" : {
+                    "type" : "array",
+                    "items":{
+                        "type" : "string"
+                    }
+                }
+            },
+            "required" : ["username", "password", "db_name", "server"]
+        },
+        "name_map" : {
+            "additionalProperties":{
+                "type" : "string"
+            }
+        }
+    },
+    "required" : ["Excel", "Postgres-DB"]
+}

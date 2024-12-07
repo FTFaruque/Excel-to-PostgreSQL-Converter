@@ -1,0 +1,13 @@
+{
+    "Excel":{
+        "source" : "C:\\Users\\rubayet.faruque\\Desktop\\excel_to_db\\dummy_data.xlsx",
+        "sheet_names":["first_table", "second_table"]
+    },
+    "Postgres-DB": {
+        "username" : "postgres",
+        "password" : "secret",
+        "db_name" : "destination_db",
+        "server" : "host.docker.internal",
+        "port" : "5433"
+    }
+}
